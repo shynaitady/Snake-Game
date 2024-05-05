@@ -41,6 +41,17 @@ Food has two types:
 Polymorphism in OOP allows objects to be treated as instances of their parent class, with the ability to override or implement behaviors in different ways. In your code, polymorphism is evident in the way different game objects handle the draw() method:
 
 - GameObject class declares an abstract method draw(). This method is then implemented distinctly in Snake and Food classes, each overriding the method to handle drawing specific to their type. Here, the same function name draw() is used for different object types, each behaving differently depending on the class that implements it.
+``` ruby
+class Snake(GameObject):
+   def draw(self):
+        [pg.draw.rect(self.game.screen, 'green', segment) for segment in self.segments]
+class Food(GameObject):
+    def draw(self):
+        if self.food_type == 'normal':
+            pg.draw.rect(self.game.screen, red, self.rect)
+        elif self.food_type == 'bonus':
+            pg.draw.rect(self.game.screen, blue, self.rect)
+```
 
 ## Abstraction:
 Abstraction involves hiding complex implementation details and showing only the essential features of the object. In your code:
