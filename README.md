@@ -120,3 +120,7 @@ def control(self, event):
                 self.directions = {key: (key in [pg.K_w, pg.K_s, pg.K_d, pg.K_RIGHT, pg.K_UP, pg.K_DOWN]) for key in self.directions}
 ```
 
+## Unittest:
+The unittest module is a built-in testing framework in Python, available as part of the standard library. The primary goal of the unittest module is to facilitate the creation of test cases and test suites to verify the behavior and correctness of individual units of code. 
+
+![alt text](unittest.png)
