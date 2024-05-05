@@ -25,10 +25,14 @@ Food has two types:
 2. Blue food gives you 20 points
 
 ## What about Leaderboard?
-While playing the game you can keep track of your best 5 attempts. You can view the list by clicking on the Leadboard button.
+**While playing the game you can keep track of your best 5 attempts. You can view the list by clicking on the Leadboard button.**
+
 ![alt text](menu.png) 
-In the Leaderboard menu, you can see your yop 5 attempts. Also you can clear all your scores by pressing button "Clear Scores"
+
+**In the Leaderboard menu, you can see your yop 5 attempts. Also you can clear all your scores by pressing button "Clear Scores"**
+
 ![alt text](leaderboard.png)
+
 # OOP pillars that are implemented in code:
 
 ## Polymorphism:
