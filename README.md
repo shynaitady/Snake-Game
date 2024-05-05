@@ -17,6 +17,9 @@ To run this game, you'll need Python and pygame installed on your machine.
 - Press button "Run Python File" in VS Code.
 
 **How to play?**
+
+![alt text](menu.png) 
+- Press button "Play" in the main menu
 - Use __WASD__ or __Arrows__ to move snake
 - Eat food to increase your score and length.
 
@@ -27,7 +30,6 @@ Food has two types:
 ## What about Leaderboard?
 **While playing the game you can keep track of your best 5 attempts. You can view the list by clicking on the Leadboard button.**
 
-![alt text](menu.png) 
 
 **In the Leaderboard menu, you can see your yop 5 attempts. Also you can clear all your scores by pressing button "Clear Scores"**
 
