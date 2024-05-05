@@ -16,5 +16,10 @@ To run this game, you'll need Python and pygame installed on your machine.
 - Use hotkey: Ctrl + F5
 - Press button "Run Python File" in VS Code.
 
-**How to control snake?**
-- Use __WASD__ or __Arrows__
+**How to play?**
+- Use __WASD__ or __Arrows__ to move snake
+- Eat food to increase your score and length.
+***Food has two types: ***
+1. Red food gives you 10 points
+2. Blue food gives you 20 points
+ 
