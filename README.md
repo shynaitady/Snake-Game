@@ -34,12 +34,35 @@ Polymorphism in OOP allows objects to be treated as instances of their parent cl
 ## Abstraction:
 Abstraction involves hiding complex implementation details and showing only the essential features of the object. In your code:
 
-The GameObject class serves as an abstract base class for other game objects. It includes the abstract method draw(), which forces all subclasses to provide their own specific implementation of this method. The GameObject class provides a template and essential interfaces, hiding the details and complexity from the user (or developer in this case).
+- The GameObject class serves as an abstract base class for other game objects. It includes the abstract method draw(), which forces all subclasses to provide their own specific implementation of this method. The GameObject class provides a template and essential interfaces, hiding the details and complexity from the user (or developer in this case).
+```ruby
+class GameObject(ABC):
+   @abstractmethod
+    def draw(self):
+        pass
 
+```
 ## Inheritance:
 Inheritance allows one class to inherit attributes and methods from another. This helps in code reusability and can enhance the application’s architecture:
-The Snake and Food classes inherit from the GameObject class. They use properties and methods defined in the GameObject class.
+- The Snake and Food classes inherit from the GameObject class. They use properties and methods defined in the GameObject class.
 ```ruby
+class GameObject(ABC):
 class Snake(GameObject):
 class Food(GameObject):
+```
+
+## Encapsulation:
+Encapsulation is about bundling the data (attributes) and methods that operate on the data into a single unit or class. It also restricts direct access to some of an object’s components, which can prevent the accidental modification of data:
+- In your classes, data like rect, direction, size, segments, and methods that modify these data (move(), control(), check_food(), etc.) are encapsulated within the respective class. For instance, the Snake class encapsulates the details about snake segments, movement direction, and scoring, exposing only necessary methods to manipulate these details in a controlled way.
+``` ruby
+class Food(GameObject):
+    def __init__(self, game, food_type='normal'):
+class Score:
+    def __init__(self, game):
+```
+- Additionally, attributes like _instances in the Singleton class are hidden from outside access, providing control over how instances of the class are created and accessed.
+``` ruby
+class Singleton(type):
+    _instances = {}
+    def __call__(cls, *args, **kwargs):
 ```
