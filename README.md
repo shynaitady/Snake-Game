@@ -66,3 +66,46 @@ class Singleton(type):
     _instances = {}
     def __call__(cls, *args, **kwargs):
 ```
+#  Design patterns that are implemented in code:
+
+## Singleton Pattern:
+The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. This pattern is implemented in your Leaderboard class:
+``` ruby
+class Leaderboard(metaclass=Singleton):
+    def __init__(self):
+        self.file_path = "scores.txt"
+        self.scores = self.load_scores()
+```
+## Factory Method Pattern:
+Although not explicitly defined as a factory, your implementation hints at the Factory Method pattern through the way different types of Food objects are created based on the game conditions:
+``` ruby
+def react(self, snake):
+    if self.food_type == 'normal':
+        snake.length += 1
+        snake.game.score.add_score(10)
+    elif self.food_type == 'bonus':
+        snake.length += 2
+        snake.game.score.add_score(20)
+```
+## Command Pattern:
+The Command pattern encapsulates a request as an object, thereby allowing for parameterization of clients with different requests, queue or log requests, and support undoable operations. While not fully implemented, the input handling in your game hints at this pattern:
+```ruby
+def control(self, event):
+        if event.type == pg.KEYDOWN:
+            if (event.key == pg.K_w or event.key == pg.K_UP) and self.directions[pg.K_w] and self.directions[pg.K_UP]:
+                self.direction = vec2(0, -self.size)
+                self.directions = {key: (key in [pg.K_w, pg.K_a, pg.K_d, pg.K_UP, pg.K_LEFT, pg.K_RIGHT]) for key in self.directions}
+
+            if (event.key == pg.K_s or event.key == pg.K_DOWN) and self.directions[pg.K_s] and self.directions[pg.K_DOWN]:
+                self.direction = vec2(0, self.size)
+                self.directions = {key: (key in [pg.K_s, pg.K_a, pg.K_d, pg.K_DOWN, pg.K_LEFT, pg.K_RIGHT]) for key in self.directions}
+
+            if (event.key == pg.K_a or event.key == pg.K_LEFT) and self.directions[pg.K_a] and self.directions[pg.K_LEFT]:
+                self.direction = vec2(-self.size, 0)
+                self.directions = {key: (key in [pg.K_w, pg.K_s, pg.K_a, pg.K_LEFT, pg.K_UP, pg.K_DOWN]) for key in self.directions}
+
+            if (event.key == pg.K_d or event.key == pg.K_RIGHT) and self.directions[pg.K_d] and self.directions[pg.K_RIGHT]:
+                self.direction = vec2(self.size, 0)
+                self.directions = {key: (key in [pg.K_w, pg.K_s, pg.K_d, pg.K_RIGHT, pg.K_UP, pg.K_DOWN]) for key in self.directions}
+```
+
