@@ -1,5 +1,6 @@
 import pygame as pg
 from time import sleep
+import unittest
 import sys
 import random
 from random import randrange
@@ -84,8 +85,7 @@ class Snake(GameObject):
             if random.random() < 0.3:
                 self.game.food = Food(self.game, 'bonus')
             else:
-                self.game.food = Food(self.game)
-
+                self.game.food = Food(self.game) 
     def move(self):
         if self.delta_time():
             self.rect.move_ip(self.direction)
@@ -333,7 +333,6 @@ class Menu:
 
 
 if __name__ == '__main__':
-
 
     menu = Menu()
     menu.main_menu()
