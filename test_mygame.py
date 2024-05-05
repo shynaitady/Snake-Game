@@ -23,7 +23,7 @@ class MockScore:
 
     def add_score(self, points):
         self.score += points
-        
+
 class TestSetup(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -35,14 +35,14 @@ class TestSetup(unittest.TestCase):
 
 class TestSnake(TestSetup):
     def setUp(self):
-        self.game = MockGame()  # MockGame now doesn't need to call pg.init()
+        self.game = MockGame() 
         self.snake = Snake(self.game)
         self.snake.rect.center = (400, 400)
 
     def test_move(self):
-        self.snake.delta_time = lambda: True  # Force delta_time to always return True
+        self.snake.delta_time = lambda: True  
         initial_position = self.snake.rect.center
-        self.snake.direction = pg.math.Vector2(50, 0)  # moving right
+        self.snake.direction = pg.math.Vector2(50, 0)  
         self.snake.move()
         self.assertNotEqual(initial_position, self.snake.rect.center)
 
@@ -52,8 +52,8 @@ class TestSnake(TestSetup):
         food.rect.center = (400, 400)
         self.game.food = food
         self.snake.check_food()
-        self.assertEqual(self.snake.length, 2)  # Assuming the snake grows by 1
-        self.assertEqual(self.game.score.score, 10)  # Assuming each food is worth 10 points
+        self.assertEqual(self.snake.length, 2)  
+        self.assertEqual(self.game.score.score, 10)  
 
 class TestFood(unittest.TestCase):
     def setUp(self):
@@ -63,8 +63,8 @@ class TestFood(unittest.TestCase):
     def test_food_reaction_normal(self):
         snake = Snake(self.game)
         self.food.react(snake)
-        self.assertEqual(snake.length, 2)  # Assuming normal food grows the snake by 1
-        self.assertEqual(self.game.score.score, 10)  # Assuming each food is worth 10 points
+        self.assertEqual(snake.length, 2)  
+        self.assertEqual(self.game.score.score, 10)  
 
 class TestScore(unittest.TestCase):
     def setUp(self):
