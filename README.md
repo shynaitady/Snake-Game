@@ -19,7 +19,7 @@ To run this game, you'll need Python and pygame installed on your machine.
 **How to play?**
 - Use __WASD__ or __Arrows__ to move snake
 - Eat food to increase your score and length.
-***Food has two types: ***
+
+*** Food has two types: ***
 1. Red food gives you 10 points
 2. Blue food gives you 20 points
- 
