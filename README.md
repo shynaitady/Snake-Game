@@ -12,9 +12,9 @@ To run this game, you'll need Python and pygame installed on your machine.
   pip install pygame
 
 ## How to start playing?
-**To start a game**
+**To start a game:**
 - Use hotkey: Ctrl + F5
 - Press button "Run Python File" in VS Code.
 
 **How to control snake?**
-- Use * * WASD * * or _ _ Arrows _ _
+- Use __WASD__ or __Arrows__
