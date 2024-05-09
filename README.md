@@ -45,6 +45,7 @@ Polymorphism in OOP allows objects to be treated as instances of their parent cl
 class Snake(GameObject):
    def draw(self):
         [pg.draw.rect(self.game.screen, 'green', segment) for segment in self.segments]
+
 class Food(GameObject):
     def draw(self):
         if self.food_type == 'normal':
@@ -79,6 +80,7 @@ Encapsulation is about bundling the data (attributes) and methods that operate o
 ``` ruby
 class Food(GameObject):
     def __init__(self, game, food_type='normal'):
+    
 class Score:
     def __init__(self, game):
 ```
