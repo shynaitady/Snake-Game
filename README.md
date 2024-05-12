@@ -37,6 +37,8 @@ Food has two types:
 
 # OOP pillars that are implemented in code:
 
+![alt text](OOP.png)
+
 ## Polymorphism:
 Polymorphism in OOP allows objects to be treated as instances of their parent class, with the ability to override or implement behaviors in different ways. In the code, polymorphism is evident in the way different game objects handle the draw() method:
 
