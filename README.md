@@ -18,7 +18,7 @@ To run this game, you'll need Python and pygame installed on your machine.
 
 **How to play?**
 
-![alt text](menu.png)
+![alt text](images/menu.png)
 
 - Press button **"Play"** in the main menu
 - Use __WASD__ or __Arrows__ to move snake
@@ -34,11 +34,11 @@ Food has two types:
 
 **In the Leaderboard menu, you can see your yop 5 attempts. Also you can clear all your scores by pressing button "Clear Scores"**
 
-![alt text](leaderboard.png)
+![alt text](images/leaderboard.png)
 
 # OOP pillars that are implemented in code:
 
-![alt text](OOP.png)
+![alt text](images/OOP.png)
 
 ## Polymorphism:
 Polymorphism in OOP allows objects to be treated as instances of their parent class, with the ability to override or implement behaviors in different ways. In the code, polymorphism is evident in the way different game objects handle the draw() method:
@@ -141,7 +141,7 @@ The unittest module is a built-in testing framework in Python, available as part
 
 The primary goal of the unittest module is to facilitate the creation of test cases and test suites to verify the behavior and correctness of individual units of code
 
-![alt text](image.png)
+![alt text]images/(image.png)
 
 ## Summary:
 
