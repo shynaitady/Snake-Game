@@ -18,7 +18,7 @@ To run this game, you'll need Python and pygame installed on your machine.
 
 **How to play?**
 
-![alt text](images/menu.png) 
+images/menu.png 
 - Press button **"Play"** in the main menu
 - Use __WASD__ or __Arrows__ to move snake
 - Eat food to increase your score and length.
