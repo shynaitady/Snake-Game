@@ -141,7 +141,7 @@ The unittest module is a built-in testing framework in Python, available as part
 
 The primary goal of the unittest module is to facilitate the creation of test cases and test suites to verify the behavior and correctness of individual units of code
 
-![alt text]images/(image.png)
+![alt text](images/image.png)
 
 ## Summary:
 
