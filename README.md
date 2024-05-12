@@ -38,7 +38,7 @@ Food has two types:
 # OOP pillars that are implemented in code:
 
 ## Polymorphism:
-Polymorphism in OOP allows objects to be treated as instances of their parent class, with the ability to override or implement behaviors in different ways. In your code, polymorphism is evident in the way different game objects handle the draw() method:
+Polymorphism in OOP allows objects to be treated as instances of their parent class, with the ability to override or implement behaviors in different ways. In the code, polymorphism is evident in the way different game objects handle the draw() method:
 
 - GameObject class declares an abstract method draw(). This method is then implemented distinctly in Snake and Food classes, each overriding the method to handle drawing specific to their type. Here, the same function name draw() is used for different object types, each behaving differently depending on the class that implements it.
 ``` ruby
@@ -55,7 +55,7 @@ class Food(GameObject):
 ```
 
 ## Abstraction:
-Abstraction involves hiding complex implementation details and showing only the essential features of the object. In your code:
+Abstraction involves hiding complex implementation details and showing only the essential features of the object.
 
 - The GameObject class serves as an abstract base class for other game objects. It includes the abstract method draw(), which forces all subclasses to provide their own specific implementation of this method. The GameObject class provides a template and essential interfaces, hiding the details and complexity from the user (or developer in this case).
 ```ruby
@@ -76,7 +76,7 @@ class Food(GameObject):
 
 ## Encapsulation:
 Encapsulation is about bundling the data (attributes) and methods that operate on the data into a single unit or class. It also restricts direct access to some of an object’s components, which can prevent the accidental modification of data:
-- In your classes, data like rect, direction, size, segments, and methods that modify these data (move(), control(), check_food(), etc.) are encapsulated within the respective class. For instance, the Snake class encapsulates the details about snake segments, movement direction, and scoring, exposing only necessary methods to manipulate these details in a controlled way.
+- In the classes, data like rect, direction, size, segments, and methods that modify these data (move(), control(), check_food(), etc.) are encapsulated within the respective class. For instance, the Snake class encapsulates the details about snake segments, movement direction, and scoring, exposing only necessary methods to manipulate these details in a controlled way.
 ``` ruby
 class Food(GameObject):
     def __init__(self, game, food_type='normal'):
@@ -93,7 +93,7 @@ class Singleton(type):
 #  Design patterns that are implemented in code:
 
 ## Singleton Pattern:
-The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. This pattern is implemented in your Leaderboard class:
+The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. This pattern is implemented in the Leaderboard class:
 ``` ruby
 class Leaderboard(metaclass=Singleton):
     def __init__(self):
@@ -134,6 +134,17 @@ def control(self, event):
 ```
 
 ## Unittest:
-The unittest module is a built-in testing framework in Python, available as part of the standard library. The primary goal of the unittest module is to facilitate the creation of test cases and test suites to verify the behavior and correctness of individual units of code. 
+The unittest module is a built-in testing framework in Python, available as part of the standard library. 
+
+The primary goal of the unittest module is to facilitate the creation of test cases and test suites to verify the behavior and correctness of individual units of code
 
 ![alt text](image.png)
+
+## Summary:
+
+In this coursework, I focused on reinforcing and applying Object-Oriented Programming (OOP) principles along with various design patterns in a practical setting using the Pygame library. The project involved developing a game or a simulation, which provided a hands-on opportunity to integrate theoretical OOP concepts into a real-world application.
+
+Project Overview:
+The project was structured around building a functional game from scratch. Pygame, a set of Python modules designed for writing video games, served as the foundation. The choice of Pygame was instrumental because it allowed for the application of OOP principles in managing graphical and event-driven interfaces that are common in game development.
+
+This coursework not only solidified my foundational knowledge in OOP and design patterns but also provided a robust framework for future projects involving complex system design and interactive software development in Python. The experience has been invaluable in demonstrating how theoretical concepts can be effectively translated into practical, real-world applications through structured programming and thoughtful design.
